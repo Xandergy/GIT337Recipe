@@ -75,6 +75,7 @@ nav ul li {
     height: fit-content;
     width: fit-content;
     transition: all .5s;
+    color: #EB5428;
 }
 /* Hover styling for list items within navigation */
 nav ul li:hover {
