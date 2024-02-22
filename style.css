@@ -1,0 +1,688 @@
+/* Added detailed notes so I wouldn't get lost in the deatils of the project */
+/* Importing Google Fonts */
+@import 
+url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+/* Styling for HTML element */
+html {
+    background-color: rgba(122, 191, 191, .5);
+}
+/* Styling for body element */
+body {
+    width: 414px;
+    background-color: #F2F2F2;
+    margin: 0 auto;
+}
+/* Styling for various headings, navigation, and footer */
+h1, h2, h3, nav a, nav span, figcaption, menu li, #social li, footer {
+    font-family: bebas neue, monospace, sans-serif;
+    font-weight: 400;
+}
+/* Styling for header */
+header {
+    position: absolute;
+    top: 0;
+}
+/* Styling for navigation */
+nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+/* Styling for navigation list */
+nav ul {
+    grid-row: 1;
+    list-style: none;
+    background-color: white;
+    overflow: hidden;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 60px;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    width: 414px;
+    justify-items: center;
+    z-index: 1;
+}
+/* Styling for menu icon */
+nav #menuIcon {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* Styling for burger icon */
+#burger {
+    cursor: pointer;
+    user-select: none;
+}
+/* Styling for expanding menu */
+nav #menuIcon:checked ~ nav ul {
+    height: 160px;
+}
+/* Styling for images within navigation */
+nav ul img {
+    width: 40px;
+}
+/* Styling for links within navigation */
+nav ul a {
+    font-size: 16px;;
+}
+/* Styling for list items within navigation */
+nav ul li {
+    text-align: center;
+    padding: 10px 0;
+    height: fit-content;
+    width: fit-content;
+    transition: all .5s;
+}
+/* Hover styling for list items within navigation */
+nav ul li:hover {
+    color: white;
+    background-color: #EB5428;
+}
+/* Styling for SVG icons within navigation */
+nav ul li svg {
+    transition: all .5s;
+}
+/* Hover styling for SVG icons within navigation */
+nav ul li svg:hover {
+    stroke: white;
+}
+/* Styling for first child list item within navigation */
+nav ul li:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* Styling for second child list item within navigation */
+nav ul li:first-child + li {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    background-color: #EB5428;
+    width: 200px;
+}
+/* Styling for last child list item within navigation */
+nav ul li:last-child {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/* Styling for search section */
+#search {
+    grid-row: 2;
+    background-color: #F2F2F2;
+    text-align: center;
+    display:grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    padding: 15px;
+}
+/* Styling for search input and button */
+#search input, #search button {
+    height: 50px;
+    margin: 0;
+}
+/* Styling for search input */
+#search input {
+    width: 300px;
+    grid-row: 1;
+    border: 2px solid #EB5428;
+}
+/* Styling for search button */
+#search button {
+    grid-row: 1;
+    background-color: #EB5428;
+    border: 2px solid #EB5428;
+}
+/* Styling for h1 element */
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 150px;
+    padding: 10px;
+}
+/* Styling for menu */
+menu {
+    padding: 0;
+    margin: auto;
+    list-style: none;
+    display: inline-flex;
+    width: 414px;
+    justify-content: space-around;
+    text-align: center;
+}
+/* Styling for links within menu */
+menu li a {
+    color: #EB5428;
+    transition: all .5s;
+}
+/* Hover styling for links within menu */
+menu li a:hover {
+    color: white;
+    background-color: #EB5428;
+}
+/* Styling for h3 element */
+h3 {
+    font-size: 25px;
+}
+/* Styling for other various elements */
+nav a, nav span, figcaption, menu li, #social li, footer {
+    font-size: 20px;
+}
+/* Styling for paragraphs, description lists, list items, navigation, and input elements */
+p, dd, li, nav, input {
+    font-family: montserrat, monospace, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+/* Styling for definition terms */
+dt {
+    font-family: montserrat, monospace, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+/* Styling for images with 'street-tacos' in source */
+[src*="street-tacos"] {
+    width: 414px;
+}
+/* Styling for paragraphs within main */
+main p {
+    margin: 5px;
+    line-height: 1.5;
+}
+/* Styling for h2 element */
+h2 {
+    font-size: 30px;
+    text-align:center;
+    margin: 5px;
+}
+/* Styling for details section */
+#details dl {
+    margin: 0 10px;
+    line-height: 1.5;
+}
+/* Styling for definition descriptions */
+#details dd {
+    display: inline;
+}
+/* Styling for pseudo element after details description */
+#details dd:after {
+    display: block;
+    content: '';
+}
+/* Styling for definition terms within details */
+#details dt {
+    display: inline-block;
+}
+/* Styling for ingredients list */
+#ingredients ul {
+    list-style: square;
+    line-height: 2;
+}
+/* Styling for ordered list items within directions */
+#directions ol li{
+    padding: 10px 0;
+    line-height: 1.5;
+}
+/* Styling for sides section */
+#sides {
+    background-color: #7ABFBF;
+    display: flex;
+    flex-direction: column;
+}
+/* Styling for figure within sides */
+#sides figure {
+    padding-left: 10px;
+    margin: 25px 0;
+    display: grid;
+    grid-template-areas: 
+                    "a b b b"
+                    "a c c c"
+                    "a d d d";
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 33px 33px 33px;
+    column-gap: 15px;
+    transition: all .5s;
+}
+/* Hover styling for figure within sides */
+#sides figure:hover {
+    background-color: #F2A007;
+}
+/* Styling for images within sides */
+#sides img {
+    width: 100px;
+    margin: auto;
+    grid-area: a;
+}
+/* Styling for figcaption, paragraphs, and description lists within sides */
+#sides figcaption, #sides p, #sides dl {
+    margin: 0;
+}
+/* Styling for figcaption within sides */
+#sides figcaption {
+    grid-area: b;
+}
+/* Styling for paragraphs within sides */
+#sides p {
+    grid-area: c;
+}
+/* Styling for description lists within sides */
+#sides dl {
+    grid-area: d;
+}
+/* Styling for description descriptions within sides */
+#sides dd {
+    margin: 0;
+}
+/* Styling for footer */
+footer {
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    justify-content: center;
+    text-align: center;
+    row-gap: 25px;
+}
+/* Styling for social media icons list */
+#social ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 30px;
+    grid-row: 1;
+}
+/* Styling for links within social media icons list */
+#social ul li a{
+    text-align: center;
+    color:#EB5428;
+    transition: all .5s;
+}
+/* Hover styling for links within social media icons list */
+#social ul li a:hover {
+    color: white;
+    background-color: #EB5428;
+}
+/* Styling for footer images */
+footer img {
+    width: 200px;
+    grid-row: 2;
+    margin: auto;
+}
+/* Media query for screens with minimum width of 768px */
+@media screen and (min-width:768px) {
+}
+/* Adjusting height for navigation list */
+    nav ul {
+        height: 200px;
+    }
+/* Hiding first child list item within navigation */
+    nav ul li:first-child {
+        grid-column-start: 2;
+        grid-column-end: 7;
+        visibility: hidden;
+    }
+/* Styling for second child list item within navigation */
+    nav ul li:first-child + li {
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: #EB5428;
+        width: 110px;
+    }
+/* Styling for last child list item within navigation */ 
+    nav ul li:last-child {
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 68px;
+    }
+/* Adjusting width for images within navigation */
+    nav ul img {
+        width: 60px
+    }
+/* Styling for search section */
+    #search {
+        grid-row: 1;
+        position: absolute;
+        z-index: 1;
+        background-color: white;
+        right: 100px;
+    }
+/* Adjusting styles for h1 element */
+    h1 {
+        text-align: left;
+        padding-top: 65px;
+    }
+/* Styling for menu */
+    menu {
+        background: rgba(255, 255, 255, .7);
+        position: absolute;
+        height: 100px;
+    }
+/* Styling for list items within menu */
+    menu li {
+        padding: 15px;
+        text-align: center;
+    }
+/* Styling for main section */
+    main {
+        display: grid;
+        grid-template-areas: 
+                        "img img img"
+                        "intro intro intro"
+                        "details details details"
+                        "ingredients directions directions"
+                        "sides sides sides";
+    }
+/* Adjusting styles for images with 'street-tacos' in source */
+    [src*="street-tacos"] {
+        grid-area: img;
+    }
+/* Adjusting styles for intro section */
+    #intro {
+        grid-area: intro;
+    }
+/* Adjusting styles for details section */
+    #details {
+        grid-area: details;
+        text-align: center;
+    }
+/* Adjusting styles for description descriptions within details */
+    #details dd {
+        margin: 10px;
+    }
+/* Adjusting styles for ingredients section */
+    #ingredients {
+        grid-area: ingredients;
+    }
+/* Adjusting styles for directions section */
+    #directions {
+        grid-area: directions;
+    }
+/* Adjusting styles for sides section */
+    #sides {
+        grid-area: sides;
+        height: 350px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-self: stretch;
+    }
+/* Adjusting styles for h2 element within sides section */
+    #sides h2 {
+        width: 768px;
+        margin: 0;
+    }
+/* Adjusting styles for figures within sides section */
+    #sides figure {
+        width: 48%;
+    }
+/* Adjusting styles for footer */
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 50px;
+        padding-top: 50px;
+    }
+/* Adjusting styles for social media icons */
+    #social {
+        grid-column: 2;
+    }
+/* Adjusting styles for footer images */
+    footer img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+/* Adjusting styles for small text */
+    small {
+        grid-column: 1;
+        grid-row: 2;
+    }
+@media screen and (min-width:1280px) {
+/* Adjusting widths for body and navigation list */   
+    body, nav ul {
+        width: 1280px;
+    }
+/* Adjusting rows for navigation */
+    nav {
+        grid-template-rows: 1fr 100px;
+    }
+/* Adjusting height and columns for navigation list */
+    nav ul {
+        height: 100px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+/* Adjusting styles for search section */
+    #search {
+        grid-row: 2;
+        position: static;
+        background-color: #F2F2F2;
+        padding-top: 50px;
+    }
+/* Hiding first child list item within navigation */
+    nav ul li:first-child {
+        grid-column: 2;
+        visibility: hidden;
+    }
+/* Adjusting styles for second child list item within navigation */    
+    nav ul li:first-child + li {
+        grid-row: 1;
+        grid-column: 1;
+        background-color: #EB5428;
+        width: 110px;
+    }
+/* Adjusting styles for last child list item within navigation */    
+    nav ul li:last-child {
+        grid-column: 11;
+        grid-row: 1;
+        width: 68px;
+    }
+/* Adjusting styles for menu */
+    menu {
+        display: inline-block;
+        position: relative;
+    }
+/* Adjusting styles for h1 element */
+    h1 {
+        text-align: center;
+        width: 1280px;
+    }
+/* Adjusting styles for menu */
+    menu {
+        flex-direction: column;
+        left: 0;
+        width: 125px;
+        height: 746px;
+        position: relative;
+        justify-content: flex-start;
+        border: 2px solid #EB5428;
+    }
+/* Padding top for first list item within menu */
+    menu li:first-child {
+        padding-top: 50px;
+    }
+/* Adjusting styles for main section */
+    main {
+        position: relative;
+        top: -750px;
+        grid-template-columns: 125px 125px 375px 1fr;
+        grid-template-rows: 1fr 125px 425px 450px;
+    }
+/* Adjusting styles for images with 'street-tacos' in source */
+    [src*="street-tacos"] {
+        width: 500px;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+/* Adjusting styles for intro section */
+    #intro {
+        grid-column: 4;
+        grid-row: 1;
+    }
+/* Adjusting styles for paragraphs within intro section */
+    #intro p {
+        line-height: 2;
+    }
+/* Adjusting styles for details section */
+    #details {
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background-color: black;
+        color: #7ABFBF;
+    }
+
+    #details h2 {
+        padding-bottom: 10px;
+    }
+
+    #details dl {
+        display: grid;
+        grid-template-rows: 25px 25px;
+    }
+
+    #details dt {
+        grid-row: 1;
+    }
+
+    #details dd {
+        grid-row: 2;
+        margin: 0;
+    }
+/* Adjusting styles for ingredients section */
+    #ingredients {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 3;
+    }
+/* Adjusting styles for directions section */
+    #directions {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row: 3;
+    }
+/* Adjusting styles for sides section */
+    #sides {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        height: 450px;
+    }
+
+    #sides h2 {
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin: auto;
+    }
+
+    #sides figure {
+        width: fit-content;
+        grid-template-areas: 
+                    "img"
+                    "figcap"
+                    "desc"
+                    "rating";
+        grid-template-columns: 250px;
+        grid-template-rows: 250px 35px 35px 35px;
+        margin: auto;
+    }
+
+    #sides figure img {
+        width: 250px;
+        grid-area: img;
+    }
+
+    #sides figure figcaption {
+        grid-area: figcap;
+    }
+
+    #sides figure p {
+        grid-area: desc;
+    }
+
+    #sides figure dl {
+        grid-area: rating;
+    }
+
+    #sides figure dl dd {
+        display: inline;
+    }
+    
+    #sides figure dl:after {
+        display: block;
+        content: '';
+    }
+    
+    #sides figure dl dt {
+        display: inline-block;
+    }
+
+    body {
+        height: 2000px;
+    }
+/* Adjusting styles for footer */
+    footer {
+        position: relative;
+        top: -750px;
+        background-color: white;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 150px 1fr 1fr;
+        padding: 30px 10px;
+    }
+
+    footer img {
+        grid-column: 1;
+        width: 150px;
+        padding-left: 10px;
+    }
+
+    footer small {
+        grid-column: 2;
+        grid-row: 1;
+        padding-top: 20px;
+        padding-left: 20px;
+        text-align: left;;
+    }
+/* Adjusting styles for social media icons */
+    #social {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    #social ul {
+        gap: 75px;
+    }
+}
+
+@media print {
+    /* Set 0.5 inch margins */
+    body {
+        margin: 0.5in;
+    }
+
+    /* Use serif fonts */
+    body, h1, h2, h3, p, dt, dd, li {
+        font-family: serif;
+    }
+
+    /* Set images to not display or grayscale */
+    img {
+        display: none; /* Set images not to display */
+    }
+
+    /* Replace hyperlinks with their full URL */
+    a::after {
+        content: " (" attr(href) ")"; /* Display full URL after hyperlink text */
+    }
+
+    /* Do not display the navigation */
+    nav {
+        display: none;
+    }
+}
